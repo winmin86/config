@@ -1,1 +1,54 @@
-AQBfATTMKsyII4rqN+jYc80rkd10Omx6y8SehsGqvwM2eFbNqvz1rkszlxRUnfce+ixkFAP+e1lsT28j1bIvlghpoIlgSlmVSbCsvpGpFCe+OePwiIezf3KcPpjI0zUsH5ljStjjnQaM47JLDwzdRppPBZDt2kWMrE8mUpxydgVMe5aHFl2Rzzx6UbEip3pOFMBDXDsbq8vylO04Gtjd53dglP78YZgokmdzKpLIc4imiJ+IpZd8syqHp9iHKS14fE6AmohXpifIXzLFeTZULWGq2DMlcaCctKd5MrpFB8p/3N1+iuwKPg01bcrLP1dhXSYKJTlNOKceCYQngLG/E4D6iQR0nyt8WkS3Nhnmzgkaf6ffnuVMkHd9JGgFb99wsdBbAnv9/+mQ3xPOb5XF9YG4PgsqKj/KshXhUbkGh1airlx2voqxjsoiybudZboSR9fLluVfF0xOZ56x2TABqBw4RQFTcSxsHu9xHaZ/q2gFn9I2liSR52MPuCjlsrrxvPg3V3kMqVHWnZqQ1gL5RgzFMGx8+BMgUAYPaWOPA5orTk3KflAPVN/cI3k1VteZVDwfFkcUICFqT/yl/3vqDUm6X1gbYGcgm18Tl8rtM201atZO3q/svsN076Cgnb5OE1r4iRaSoSJmaLhsBf83ITp4TQVEIUpGEMuTjgjxgrL/Q6NticmVCxsq+SwSdgl2k58PaJgp9VboQDbzWD+tF5V3kvQ0cXwJVKo2l6zJdXz8mGVbENwOjV71vR8S5ONHACz9abAYTgU3hUmykT0AADRTxxcftCB3lhx0IcrgRXo2fRaLADQLMDSWCdGHgnm2sSglpyZPccDB9QVUh5kB7h0gzSKVRK17d6lNUA6fg60lyEUG5vTFe+Wg0Vm+4deVo3eZl9BJT7ISTPufzqNV92x4CPR1bBlDRZFnTZPgUomC5FxUfx1+PVGz45q7HNGJmsMd2vQYZhdRLPFkq3eG+YloS1RI4Sd5OleMzjSg5drcsezaNgSZZZCBNCHELnaZOeQiAuv26iyCcWUE2LyQwPIMN8uvStFQTBtZPBiEM4uqpj/6olE+6cOFpYU4ek82uKBkK29L1lDl1F0eXfZVAXIvIeHQ87UckbNDyFMu5NRJM/9kF6qLZP9awbz8/QkHJlA03Mw6Artc+qU0SHm++pmcefeme9OpPcTVcJ58RGSPv3i0rZZBJhJNtuKy8eOnisUJI1IJ6PgJLyU+WGwnoFpB7IcLKdtfeEnwHmmJ36daJA37xZYwlsAnoVTHDzzU3koOD5tUfV7UM1XkbNuM7Tf37QyW8kctJ+RrMyO/jbX/270rhXYO/YZPPjz14ovUhdV9XyAdDGZurW2HDde8TTYnrAnr5D0HBk9+vWqfofv2LSospYk+FOKp7iWyqVRNB0ScSIT10tLcRmOcUn+H2Shz883bweW/33meCIxxDp7yTzHTyWcNpU14iqLyowuoqsVuC0F7iTWgY0L4rp6iJ6x3NQR3RyqSQ0QuSOCK3X6NBbtgMQjjvnA4iFklemYlP/xPASVHiyWLZLwZhGMllXTqU9h6ySgNgFUKGjepPyul8dBdW3v1Zk2usdW+Wp9IiHMoyUAktJnJ0EMqZD0Ia722vB28wW6NPSTHlGWq+jdi5A7NAQjZ2LWxK1k4DxVrDexBZA8MV3NEfNrpz8tkZP56I6Q+sVK+ZKuki8KtJ6f7XIducyKUvSAD821CwQMNAf+5vbGBYkJiUqlfLlWv3JyG
+spring:
+  application:
+    name: consumer
+  hystrix:
+    enabled: true
+
+server:
+  port: 3001
+eureka:
+  client:
+    service-url:
+      defaultZone: '{cipher}AQBzdtUpigYU/2uH6ywIlWh/uy/bbGW8tR9pKU4BsYxyN4VqkudWYJ6vrtfh8brO/EPvCfcQv8xbIWjLEnO9UWRW05MEfyhuosq5jMd2bI3RtX9BCUXxqKnN3fxzOCbHPMkRL633L+UwYhThR/XrBhTM+lx7TH8oE32xOdwNaRzCdDSNgKpdqjJs9AMNBJe0ZQ+4Y4OvAETr2T/h3+EuuisDFn5OUaY6zkaExqofad26fYTr9znNbxQ6vt+00Z4oacAqjKupGfFgeICRZqG8Pl1Ae9yM5OAdtxG6sVjhGM9uJLo0BQwN9XZ4f8PGMjjhgy3igCKWmsPkqk6sqm2PNva4vyqfCxC8MsPjkbEA8sokliRfGIIeuBV4YQurV3kxfKWAC8VFVgdLQMpHUEs6XOx8K+mhbuTUR27D2/mlhy8Boebs0YW6fzDJMZh9yEwV21EKifqhgN8KzYzcwr5iq8yB'
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    lease-expiration-duration-in-seconds: 5
+    lease-renewal-interval-in-seconds: 10
+feign:
+  httpclient:
+    enabled: true
+  hystrix:
+    enabled: true
+    command:
+      default:
+        execution:
+          timeout:
+            enabled: true
+          isolation:
+            thread:
+              timeoutInMilliseconds: 10000
+
+  gateway:
+    ribbon:
+      NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 10000
+        timeout:
+          enabled: true
+
+
+
+
+
+
+
+
+
